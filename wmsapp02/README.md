@@ -1,10 +1,8 @@
-# Wmsapp
+# Wmsapp02
 
 Uses NodeJS, Angular, Express and ProstgreSQL.
 Implementing the HTTP and HTTPS API to expose CRUD operation on the Users, Products and Categories.
 
-##  Features:
-Registration, login, sendEmail, upload product's images, upload and  download product's spreadsheet.
 
 Download or git clone:
 ```
@@ -37,12 +35,11 @@ or
 https://localhost:9090/
 
 
-The app uses the database. The SQL file wmsappdb.sql is at the wmsapp02/db folder. We can use the SQL Shell(psql), the command-line interface to PostgreSQL, to create the database and the tables.
+The app uses the database. The SQL file wmsappdb.sql is at the db folder. We can use the SQL Shell(psql), the command-line interface to PostgreSQL, to create the database and the tables.
 
-Settings for the database and the email are at the configs.js file at the wmsapp02 folder.
 
 In a Software Engineering world big projects are divided into mile stones a.k.a. phases or versions.
 In open source stack there is always a continuous improvements on the code, hence now and then there is a new version of the code. For example, a project can be divided into 3 milestones or phases. There is no such thing as impossible, analyze it, look it in all angles....
 
 
-Enjoy.
+Enjoy...:-)

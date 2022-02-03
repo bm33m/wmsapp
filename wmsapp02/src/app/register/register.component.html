@@ -1,0 +1,42 @@
+<h1>Register Users:</h1>
+<hr>
+<div class="dvregister">
+  <form class="frmUser" [formGroup]="rgForm" (ngSubmit)="registerUser()">
+  <div class="dvreg">
+    <label>Name:</label><br>
+    <input class="cinpt" type="text" formControlName="nameN" id="uname" name="uname" placeholder="name" maxlength="30"  required/>
+  </div>
+  <div class="dvreg">
+    <label>Surname:</label><br>
+    <input class="cinpt" type="text" formControlName="surnameN" id="surname" name="surname" placeholder="surname" maxlength="30"/>
+  </div>
+  <div class="dvreg">
+    <label>Email:</label><br>
+    <input class="cinpt" type="email" formControlName="emailN" id="email" name="email" placeholder="email" maxlength="30" required />
+  </div>
+  <div class="dvreg">
+    <label>Password:</label><br>
+    <input class="cinpt" type="password" formControlName="passwordN" id="password" name="password" placeholder="password" maxlength="264" minlength="6" required />
+  </div>
+  <div class="dvreg">
+  <label> Active: </label><br>
+  <select formControlName="isactiveN" id="isactive" name="isactive">
+    <option value="1" selected>Active</option>
+    <option value="0">NotActive</option>
+    <option value="1">Active</option>
+    <option value="0">NotActive</option>
+  </select>
+  </div>
+  <div class="dvreg">
+    <label>Message:</label><br>
+    <textarea id="txtmes" formControlName="msgN" name="txtmes" placeholder="Message." value="{{ regInfo }}" ></textarea>
+  </div>
+  <div id="divT">
+    <p><input type="submit" name="btnRegister" value="Register"></p>
+  </div>
+  </form>
+</div>
+<div class="info" id="info">
+  {{ regInfo }}
+</div>
+<hr>

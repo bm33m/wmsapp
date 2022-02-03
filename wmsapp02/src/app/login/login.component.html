@@ -1,0 +1,20 @@
+<b>Welcome back: {{ name }}</b>
+<h1>Login:</h1>
+<hr>
+<div class="dvlogin">
+  <form class="frmlogin" [formGroup]="lgForm" (ngSubmit)="loginUser()">
+  <div class="dvcont">
+    <label>Email:</label><br>
+    <input class="cinpt" formControlName="emailN" type="email" formCon id="email" name="email" placeholder="email" value="{{ email }}" maxlength="30" required />
+  </div>
+  <div class="dvcont">
+      <label>Password:</label><br>
+      <input class="cinpt" formControlName="passwordN" type="password" id="pass" name="password" placeholder="password" maxlength="20" required />
+  </div>
+  <p><input type="submit" value="Login"/></p>
+  </form>
+</div>
+<p>
+  {{ logInfo }}
+</p>
+<hr>

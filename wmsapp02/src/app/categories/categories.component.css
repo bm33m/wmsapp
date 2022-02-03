@@ -1,0 +1,15 @@
+.lblCategories{
+  width: 500px;
+  background: #effff8;
+  border: groove 10px green;
+  border-radius: 0.5em;
+  display: inline-block;
+}
+
+.lblhCategories{
+  background: #fffff8;
+  width: 500px;
+  border-radius: 0.5em;
+  border: groove 10px green;
+  display: inline-block;
+}

@@ -1,0 +1,41 @@
+.lblProduct{
+  background: #fffff8;
+  width: 500px;
+  height: 500px;
+  border: groove 10px green;
+  display: inline-block;
+  border-radius: 0.5em;
+}
+
+.lblhProducts{
+  width: 500px;
+  background: #effff8;
+  border: groove 10px green;
+  border-radius: 0.5em;
+  display: inline-block;
+}
+
+.dvproducts {
+  border: 10px solid #777;
+  width: auto;
+  padding: 100px;
+  margin-bottom: 50px;
+}
+
+.lblPoductImage {
+  background-color: rgba(25, 70, 51, 2);
+	border: 3px;
+	border-radius: 3.5em;
+	color: rgba(55, 25, 55, 0.95);
+  height: 120px;
+  width: 120px;
+  border-color: #123;
+  border-style: solid;
+}
+
+.lblPoductImage img {
+  height: 100px;
+  width: 100px;
+  border: solid 5px white;
+  border-radius: 100%;
+}

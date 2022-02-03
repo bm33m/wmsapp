@@ -1,0 +1,20 @@
+{
+  "url2": "https://loacalhost:9090/",
+  "1.": {
+    "productid": 1,
+    "productcode": "202201-01234",
+    "name": "wmsapp",
+    "description": "Warehouse managment system application.",
+    "categoryid": 1,
+    "price": 3210.99,
+    "image": "wmsapp1.png",
+    "spreadsheet": "wmsapp1.txt",
+    "createdby": "Wms2022, wms2022@wmsapp.org",
+    "modifiedby": "Wms2022, wms2022@wmsapp.org",
+    "listdate": "dbDate()",
+    "modified": "dbDate()",
+  },
+  "2.": {},
+  "3.": {},
+  "4.": {},
+}

@@ -1,0 +1,79 @@
+<h1>Categories</h1>
+<hr>
+<div class="search">
+  <div class="divSearch">
+    <input type="search" name="txtSearchCategoryCode" id="txtSearchCategoryCode" placeholder="Search category code" value="" required>
+    <button type="button" name="btnCategoryCode" (click)="searchCategoryCode()">Help</button>
+  </div>
+  <div class="divSearch">
+    <input type="number" name="txtCategoriesCodes" id="txtCategoriesCodes" placeholder="categories" value="" min="10">
+    <button type="button" name="btnCategoriesCode" (click)="allCategories()">All Categories</button>
+  </div>
+</div>
+<div class="results" id="categoryCodeDiv">
+</div>
+<div class="results" id="allCategoriesDiv">
+</div>
+<div class="results" id="categoryList">
+  <table>
+    <tr>
+      <th *ngFor="let xheader of header">{{ xheader }}</th>
+    </tr>
+    <tr *ngFor="let category of categories">
+      <td><input type="text" id="categoryidX" name="categoryidX" value="{{ category.categoryid }}" readonly></td>
+      <td><input type="text" id="categorycodeX" name="categorycodeX" value="{{ category.categorycode }}"></td>
+      <td><input type="text" id="nameX" name="nameX" value="{{ category.name }}"></td>
+      <td><input type="text" id="isactiveX" name="isactiveX" value="{{ category.isactive }}"></td>
+      <td><input type="text" id="createdbyX" name="createdbyX" value="{{ category.createdby }}" readonly></td>
+      <td><input type="text" id="modifiedbyX"  name="modifiedbyX" value="{{ category.modifiedby }}" readonly></td>
+      <td><input type="text" id="listdateX" name="listdateX" value="{{ category.listdate }}" readonly></td>
+      <td><input type="text" id="modifiedX" name="modifiedX" value="{{ category.modified }}" readonly></td>
+      <td><button type="button" (click)="updateCategories(category)">update</button></td>
+      <td><button type="button" (click)="deleteCategories(category)">delete</button></td>
+    </tr>
+  </table>
+</div>
+
+<hr>
+<div class="dvregister">
+  <form class="frmUser" [formGroup]="categForm" (ngSubmit)="registerCategories()">
+  <div class="dvreg">
+    <label>Name:</label><br>
+    <input class="cinpt" type="text" formControlName="nameN" id="name" name="name" placeholder="name" maxlength="30"  required/>
+  </div>
+  <div class="dvreg">
+    <label>Category Code:</label><br>
+    <input class="cinpt" type="text" formControlName="categorycodeN" id="categorycode" name="categorycode" placeholder="Code" value="{{ categoryCode }}" maxlength="6" required />
+  </div>
+  <div class="dvreg">
+    <label>Active:</label><br>
+    <select formControlName="isactiveN" id="isactive" name="isactive">
+      <option value="1" selected>[Active]</option>
+      <option value="0">NotActive</option>
+      <option value="1">Active</option>
+      <option value="0">NotActive</option>
+    </select>
+  </div>
+  <div class="dvreg">
+    <label>User:</label><br>
+    <input class="cinpt" type="text" formControlName="userN" id="user" name="user" placeholder="user" maxlength="30"  required/>
+  </div>
+  <div class="dvreg">
+    <label>Info:</label><br>
+    <textarea formControlName="infoN" name="info" id="info" placeholder="info." value="{{ categInfo }}" ></textarea>
+  </div>
+  <div id="divT">
+    <p><input type="submit" name="btnRegister" value="Submit"></p>
+  </div>
+  </form>
+</div>
+<div class="info" id="info">
+  {{ categInfo }}
+</div>
+<hr>
+<p>
+  categorycode: ABC123
+  Enter a unique category code for each Category, containing 3 alphabet letters and three
+  numeric characters e.g., ABC123.
+  For help press help.
+</p>

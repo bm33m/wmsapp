@@ -1,0 +1,41 @@
+.dvlogin {
+  border: 10px solid #777;
+  width: auto;
+  padding: 100px;
+  margin-bottom: 50px;
+  background-color: #d4ff39;
+}
+
+.frmlogin {
+   min-width: 150px;
+   max-width: 500px;
+   width: 90%;
+   background: #ffffc8;
+}
+
+form > div {
+    position: relative;
+}
+
+form {
+    width: 550px;
+    margin: 2em auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    border: groove 10px green;
+}
+
+.lbllog {
+    min-width: 150px;
+    max-width: 500px;
+    width: 90%;
+    background-color: #c8ff78;
+}
+
+.txtpay {
+    min-width: 150px;
+    max-width: 500px;
+    width: 90%;
+    background-color: #c8ff78;
+}

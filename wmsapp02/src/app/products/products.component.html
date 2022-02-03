@@ -1,0 +1,89 @@
+<h1>Products:</h1>
+<div class="search" id="dvproducts">
+  <div class="divSearch">
+    <input type="search" name="prodCategory" id="prodCategory" placeholder="Search category id" value="" required>
+    <button type="button" name="button1" (click)="searchCategoryID()">Search</button>
+  </div>
+  <div class="divSearch">
+    <input type="number" name="prodCategoryX" id="prodCategoryX" value="" min="10">
+    <button type="button" name="button2" (click)="allCategories()">allCategories</button>
+  </div>
+  <div class="divSearch">
+    <input type="number" name="productsX" id="productsX" value="" min="10">
+    <button type="button" name="button3" (click)="allProducts()">allProducts</button>
+  </div>
+</div>
+<div class="results" id="prodCategoriesDiv">
+</div>
+<div class="results" id="productsList">
+  <table>
+    <tr>
+      <th *ngFor="let xheader of header">{{ xheader }}</th>
+    </tr>
+    <tr *ngFor="let product of products">
+      <td><input type="text" id="productidX" name="productidX" value="{{ product.productid }}" readonly></td>
+      <td><input type="text" id="productcodeX" name="productcodeX" value="{{ product.productcode }}"></td>
+      <td><input type="text" id="nameX" name="nameX" value="{{ product.name }}"></td>
+      <td><input type="text" id="descriptionX" name="descriptionX" value="{{ product.description }}"></td>
+      <td><input type="text" id="categoryX" name="categoryX" value="{{ product.categoryid }}"></td>
+      <td><input type="number" id="priceX"  name="priceX" value="{{ product.price }}" step="0.01"></td>
+      <td><input type="text" id="imageX" name="imageX" value="{{ product.image }}"></td>
+      <td><input type="text" id="spreadsheetX" name="spreadsheetX" value="{{ product.spreadsheet }}"></td>
+      <td><input type="text" id="createdbyX" name="createdbyX" value="{{ product.createdby }}" readonly></td>
+      <td><input type="text" id="modifiedby" name="modifiedbyX" value="{{ product.modifiedby }}" readonly></td>
+      <td><input type="text" id="listdateX" name="listdateX" value="{{ product.listdate }}" readonly></td>
+      <td><input type="text" id="modifiedX" name="modifiedX" value="{{ product.modified }}" readonly></td>
+      <td><button type="button" (click)="updateProducts(product)">update</button></td>
+      <td><button type="button" (click)="deleteProducts(product)">delete</button></td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div class="dvregister">
+  <form id="form" class="frmUser" [formGroup]="prodForm" (ngSubmit)="registerProducts()">
+  <div class="dvreg">
+    <label>Name:</label><br>
+    <input class="cinpt" type="text" formControlName="nameN" id="name" name="name" placeholder="name" maxlength="30"  required/>
+  </div>
+  <div class="dvreg">
+    <label>Product Code:</label><br>
+    <input class="cinpt" type="text" formControlName="productcodeN" id="productcode" name="productcode" placeholder="Code" value="{{ productCode }}" maxlength="255" required />
+  </div>
+  <div class="dvreg">
+    <label>Category Id:</label><br>
+    <select formControlName="categoryidN" id="categoryid" name="categoryidN">
+      <option value="1" selected>1</option>
+      <option *ngFor = "let i of categoriesIds" value="{{ i }}">{{ i }}</option>
+    </select>
+  </div>
+  <div class="dvreg">
+    <label>Price:</label><br>
+    <input class="cinpt" type="number" formControlName="priceN" id="price" name="price" placeholder="1.0" step="0.01" min="0" max="9999.99" required />
+  </div>
+  <div class="dvreg">
+    <label>Description:</label><br>
+    <textarea formControlName="descriptionN" name="description" id="description" placeholder="description." ></textarea>
+  </div>
+  <div class="dvreg">
+    <label>Image file:</label><br>
+    <p><input type="file" formControlName="imageFileN" name="imageFile" id="imageFile"></p>
+    <p>.jpg, .jpeg, .png</p>
+    <p>1024 KB or less</p>
+  </div>
+  <div class="dvreg">
+    <label>Spreadsheet file:</label><br>
+    <p><input type="file" formControlName="spreadsheetFileN" name="spreadsheetFile" id="spreadsheetFile"></p>
+    <p>.xml, .xls, .xlsx, .csv, .json, .pdf, .txt</p>
+    <p>1024 KB or less</p>
+  </div>
+  <div id="divT">
+    <p><input type="submit" name="btnRegister" value="Submit"></p>
+  </div>
+  </form>
+</div>
+<div class="info" id="info">
+  {{ prodInfo }}
+</div>
+<div class="results" id="productsDiv">
+</div>
+<hr>

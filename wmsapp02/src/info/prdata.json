@@ -1,0 +1,18 @@
+{
+    "products":[{
+      "code": "001",
+      "name": "awesome",
+      "description": "awesome",
+      "price": "24.99"
+      },{
+      "code": "002",
+      "name": "cool",
+      "description": "cool",
+      "price": "59.99"
+      },{
+      "code": "003",
+      "name": "supercool",
+      "description": "supercool",
+      "price": "99.99"}
+    ]
+}

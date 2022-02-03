@@ -1,0 +1,285 @@
+/*
+app.css
+Author: Brian
+*/
+
+
+header {
+  background-color: #8071;
+  border: 5px solid #777;
+  height: auto;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display:grid;
+}
+
+.navbar001 {
+  background-color: #000;
+  height: 40px;
+  float: left;
+  width: 90%;
+}
+
+.navbar001:hover {
+  background-color: red;
+}
+
+.navbar001 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar001 ul li {
+  display: block;
+  position: relative;
+  float: left;
+  background-color: #faf;
+}
+
+.navbar ul li a {
+  display: block;
+  padding: 0;
+  border-style: dashed;
+  text-decoration: none;
+  width: 100px;
+  line-height: 30px;
+}
+
+.navbar1 li:hover {
+  background-color: yellow;
+}
+
+.navbar2 li:hover {
+  background-color: yellow;
+}
+
+.navbar1 ul {
+  position: absolute;
+  padding: 0;
+  left: 0;
+  display: none;
+}
+
+.navbar1 li:hover ul ul {
+  display: none;
+}
+
+.navbar1 li:hover ul {
+  display: block;
+}
+
+.navbar1 li li:hover ul {
+  display: block;
+  margin-left: 100px;
+  margin-top: -40px;
+}
+
+.show {
+  display: none;
+}
+
+.hbar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#dvbar2 {
+  display: block;
+}
+
+#dvbar3 {
+  display: none;
+}
+
+.info {
+  float: left;
+  width: 25%;
+}
+
+.info img {
+  width: 25%;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+  }
+  #dvbar2 {
+    display: none;
+  }
+  #dvbar3 {
+    display: block;
+  }
+  .info {
+    width: 100%;
+  }
+  .charts{
+    -webkit-transform: rotate(90deg) translate(-9px, 6px);
+    transform: rotate(90deg) translate(-9px, 6px);
+  }
+  header{
+    position: relative;
+  }
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#dvsize {
+  background-color: #ffeebb;
+}
+
+body {
+    background-color: #ffffd8;
+}
+
+input:focus, textarea:focus {
+    color: goldenrod;
+}
+
+hr {
+    border: 1px solid blue;
+		border-top: solid 10px #e8e2e3;
+}
+
+.dvregister {
+  border: 10px solid #777;
+  width: auto;
+  padding: 100px;
+  margin-bottom: 50px;
+  background-color: #d4ff39;
+}
+
+pre{
+    border: dotted #ccc;
+    padding: 5px;
+    background-color: #cce;
+    width: 100%;
+}
+
+.code{
+    padding: 4px;
+    background-color: #dfffd8;
+    display: grid;
+    width: 100%;
+}
+
+.dvwrap {
+    display: grid;
+    overflow-x: auto;
+}
+
+.logs{
+    padding: 2px;
+    background-color: #ccd;
+    display: grid;
+    float: left;
+    width: 40%;
+}
+
+.log{
+    padding: 2px;
+    background-color: #abc;
+    display: grid;
+    float: left;
+    width: 40%;
+}
+
+.dvlogs {
+  border: 10px solid #777;
+  width: auto;
+  padding: 5px;
+  margin-bottom: 50px;
+  background-color: #c4bf39;
+  overflow-y: auto;
+  height: 100px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  border: 2px solid #abc;
+  font-size: 12px;
+  background-image: url("/assets/prop.jpg");
+}
+
+tr {
+  border-bottom: 1px solid #bcd;
+}
+
+tr:nth-child(odd) {
+  background-color: #bac;
+}
+
+tr:nth-child(even) {
+  color: #ffff00;
+}
+
+tr:hover {
+  background-color: #ff33cc;
+}
+
+.paginator {
+  float: left;
+  width: 10%;
+  background-color: #efffef;
+  padding: 10px;
+}
+
+.cpaginator {
+  float: left;
+  width: 10%;
+  background-color: yellow;
+  padding: 10px;
+}
+
+.paginator:hover {
+  background-color: red;
+}
+
+.cpaginator:hover {
+  background-color: red;
+}
+
+.dvpg:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.dvPoductImage {
+  height: 150px;
+  width: 150px;
+  border: solid 5px white;
+  border-radius: 100%;
+}
+
+.dvPoductImage img {
+  height: 100px;
+  width: 100px;
+  border: solid 5px white;
+  border-radius: 100%;
+}
+
+
+
+footer {
+  background-color: #000000;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+}
+
+input:focus, textarea:focus {
+    color: goldenrod;
+}
